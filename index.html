@@ -46,6 +46,20 @@
       configId="dec42b05-ba45-45a2-9abf-416df81afa8e"
       triggerId="search-trigger">
     </gen-search-widget>
+
+    <script>
+      // Error handling for the search widget
+      window.addEventListener('gen-search-widget-error', (event) => {
+        console.error('Search widget error:', event.detail);
+        // You can add custom error handling here, like displaying an error message to the user.
+      });
+
+      // Logging search events to the console
+      window.addEventListener('gen-search-widget-search', (event) => {
+        console.log('Search query:', event.detail.query);
+        console.log('Search results:', event.detail.results);
+      });
+    </script>
   </div>
 </body>
 </html>
