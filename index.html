@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Gemini Chatbot Block</title>
+  <style>
+    /* Basic styling for a clean and responsive layout */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    #chatbot-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 600px; /* Adjust as needed for desired width */
+      margin: 0 auto; /* Center the container horizontally */
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+    }
+
+    #search-trigger {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chatbot-container">
+    <input type="text" id="search-trigger" placeholder="Search here (optional)">
+
+    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB"></script>
+
+    <gen-search-widget
+      configId="dec42b05-ba45-45a2-9abf-416df81afa8e"
+      triggerId="search-trigger">
+    </gen-search-widget>
+  </div>
+</body>
+</html>
